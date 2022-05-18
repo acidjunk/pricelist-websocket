@@ -3,7 +3,7 @@ Transform: AWS::Serverless-2016-10-31
 
 Resources:
   OnConnect:
-    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Type: AWS::Serverless::Function
     Properties:
       FunctionName: "onConnect"
       CodeUri: onConnect/
@@ -11,7 +11,7 @@ Resources:
       Runtime: python3.9
       Role: !Sub arn:aws:iam::${AWS::AccountId}:role/ws_lambda_role
   OnDisconnect:
-    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Type: AWS::Serverless::Function
     Properties:
       FunctionName: "onDisconnect"
       CodeUri: onDisconnect/
@@ -19,18 +19,18 @@ Resources:
       Runtime: python3.9
       Role: !Sub arn:aws:iam::${AWS::AccountId}:role/ws_lambda_role
   OnDefault:
-    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Type: AWS::Serverless::Function
     Properties:
       FunctionName: "onDefault"
       CodeUri: onDefault/
       Handler: app.lambda_handler
       Runtime: python3.9
       Role: !Sub arn:aws:iam::${AWS::AccountId}:role/ws_lambda_role
-  SendMessages:
-    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+  SendMessage:
+    Type: AWS::Serverless::Function
     Properties:
-      FunctionName: "sendMessages"
-      CodeUri: sendMessages/
+      FunctionName: "sendMessage"
+      CodeUri: sendMessage/
       Handler: app.lambda_handler
       Runtime: python3.9
       Role: !Sub arn:aws:iam::${AWS::AccountId}:role/ws_lambda_role
