@@ -3,7 +3,7 @@ import boto3
 
 # connection URL (i.e. backend URL).
 def lambda_handler(event, context):
-    # to check if deploy works
+    # remove this comment
     dynamo = boto3.client("dynamodb")
     URL = "https://1n1v00okbh.execute-api.eu-central-1.amazonaws.com/prod"
     client = boto3.client("apigatewaymanagementapi", endpoint_url=URL)

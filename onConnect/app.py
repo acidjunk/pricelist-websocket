@@ -2,7 +2,7 @@ import json
 import boto3
 
 def lambda_handler(event, context):
-    # to check if deploy works
+    # remove this comment
     print(event)
     client = boto3.client("dynamodb")
     client.put_item(
