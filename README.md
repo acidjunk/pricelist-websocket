@@ -44,6 +44,12 @@ sam build --use-container
 sam deploy --guided
 ```
 
+NOTE: when you have SAM and AWS CLI up and running a deploy wizard can be used:
+
+```bash
+sam deploy --guided
+```
+
 The first command will build the source of your application. 
 The second command will package and deploy your application to AWS, with a series of prompts:
 
